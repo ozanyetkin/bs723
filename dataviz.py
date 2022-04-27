@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 sides = [1, 2, 3, 4, 5, 6]
 
 def roll_dice(sides):
-    dice = random.choice(sides)
-    return dice
+    dice = random.choices(sides, weights=[1, 10, 1, 1, 1, 1], k=1)
+    return dice[0]
 
 num_of_rolls = 100
-num_of_dices = 100
+num_of_dices = 1000
 sum_of_results = []
 for i in range(num_of_rolls):
     results = 0
